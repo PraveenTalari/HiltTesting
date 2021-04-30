@@ -15,6 +15,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Inject
+    lateinit var unChangedDependencyProvidedByHiltModule: UnChangedDependency
+
+    @Inject
     lateinit var dependencyProvidedByHiltModule: IDependencyProvidedByHiltModule
 
     @Inject
@@ -30,6 +33,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Column {
+                        Greeting(unChangedDependencyProvidedByHiltModule.getMessage())
                         Greeting(dependencyProvidedByHiltModule.getMessage())
                         Greeting(openClassWithoutInterface.getMessage())
                         Greeting(finalClassWithoutInterface.getMessage())
