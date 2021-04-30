@@ -83,16 +83,16 @@ dependencies {
 
 
     //BEGIN HILT
-    implementation 'com.google.dagger:hilt-android:2.35'
-    kapt 'com.google.dagger:hilt-compiler:2.35'
+    implementation 'com.google.dagger:hilt-android:2.35.1'
+    kapt 'com.google.dagger:hilt-compiler:2.35.1'
 
     // For instrumentation tests
-    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.35'
-    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.35'
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.35.1'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.35.1'
 
     // For local unit tests
-    testImplementation 'com.google.dagger:hilt-android-testing:2.35'
-    kaptTest 'com.google.dagger:hilt-compiler:2.35'
+    testImplementation 'com.google.dagger:hilt-android-testing:2.35.1'
+    kaptTest 'com.google.dagger:hilt-compiler:2.35.1'
 
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
 
@@ -103,10 +103,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
 
-
-
-
-
     //not related to our hilt testing but it is good to use junit 5 instead of junit 4
 
     //junit4
@@ -114,7 +110,7 @@ dependencies {
 
     //junit5
     //used in non instrumentation tests
-    testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.0"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:5.7.0"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.0"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 }
