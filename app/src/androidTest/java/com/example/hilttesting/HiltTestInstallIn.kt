@@ -73,27 +73,3 @@ class TestInstallInModule(b: ProductionHiltModule) : MarkerInterfaceForModule by
         }
     }
 }*/
-
-
-
-@Module
-@TestInstallIn(
-    components = [SingletonComponent::class],
-    replaces = [ProductionHiltModule::class]
-)
-object TestInstallInModule2 {
-    @Provides
-    fun provideMessageService() = object : IDependencyProvidedByHiltModule {
-        override fun getMessage(): String {
-            return "Test DependencyProvidedByHiltModule2"
-        }
-    }
-
-    //even though we don't change the below dependency in this test class
-    //we have to copy the same from ProductionHiltModule as we are replacing the entire ProductionHiltModule module
-    //with TestModule
-    @Provides
-    fun getUnChangedDependency(): UnChangedDependency {
-        return UnChangedDependency()
-    }
-}
