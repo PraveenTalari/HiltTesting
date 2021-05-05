@@ -1,3 +1,4 @@
+/*
 package com.example.hilttesting
 
 import androidx.compose.ui.test.assertIsDisplayed
@@ -45,7 +46,8 @@ class HiltTestModule {
         }
     }
 
-    /*
+    */
+/*
     //the above code can be simplified using delegation(but it needs interface)
     //but it will NOT work as we cannot pass parameters to Hilt modules
     @Module
@@ -57,7 +59,8 @@ class HiltTestModule {
                 return "Test DependencyProvidedByHiltModule"
             }
         }
-    }*/
+    }*//*
+
 
     @Before
     fun setUp() {
@@ -69,3 +72,4 @@ class HiltTestModule {
         signUpTestRule.onNodeWithText("Test DependencyProvidedByHiltModule").assertIsDisplayed()
     }
 }
+*/
